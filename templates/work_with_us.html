@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Work With Us - Sin Pena Improv School{% endblock %}
+
+{% block content %}
+<!-- Work With Us Header -->
+<section class="work-header">
+    <div class="container">
+        <div class="work-header-content">
+            <h1 class="work-headline"><span class="highlight">Conecta</span> With Your Team</h1>
+            <p class="work-subhead">Beyond the stage. We bring the tools of improvisation—active listening, adaptability, and collaboration—directly to your organization.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Pillars -->
+<section class="service-pillars">
+    <div class="container">
+        <div class="service-pillars-content">
+            <div class="service-pillar">
+                <h3 class="pillar-title">Corporate Training</h3>
+                <p class="pillar-focus"><em>Focus:</em> Soft Skills for Hard Problems</p>
+                <p class="pillar-copy">Shift the dynamic of your workplace. We use applied improvisation to train agility, active listening, and team cohesion.</p>
+            </div>
+            <div class="service-pillar">
+                <h3 class="pillar-title">School Partnerships</h3>
+                <p class="pillar-focus"><em>Focus:</em> Social-Emotional Learning (SEL) & Bilingual Support</p>
+                <p class="pillar-copy">Give students a voice. We partner with schools (like Embarc) to provide programming that supports language acquisition and emotional growth.</p>
+            </div>
+            <div class="service-pillar">
+                <h3 class="pillar-title">Private Events</h3>
+                <p class="pillar-focus"><em>Focus:</em> <em>Celebraciones</em> & Gatherings</p>
+                <p class="pillar-copy">Do something different. Custom workshops for friends and families to laugh together.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="contact-form-content">
+            <h2 class="contact-headline">Request a Proposal</h2>
+            <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="service_type">I am interested in...</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="Corporate Training">Corporate Training</option>
+                        <option value="School Partnership">School Partnership</option>
+                        <option value="Private Event">Private Event</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Request a Proposal</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
