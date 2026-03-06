@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Sin Pena Improv School{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-headline">Take an improv class and practice your Spanish... <span class="highlight">sin pena!</span></h1>
+            <p class="hero-subhead">We are not a language school—we are a judgment-free zone to <em>play</em> with the language you have. Whether you are fully fluent or just finding your voice, join us to improvise, connect, and make mistakes in a supportive community.</p>
+            <p class="hero-alt-headline">Practice your Spanish through improv… sin pena!</p>
+            <p class="hero-alt-subhead">A playful, supportive and judgment-free space where students can practice conversational Spanish through the art of improvisation.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('classes') }}" class="btn btn-primary">Take a Class</a>
+                <a href="{{ url_for('shows') }}" class="btn btn-secondary">See a Show</a>
+                <a href="{{ url_for('work_with_us') }}" class="btn btn-tertiary">Work With Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Secondary Section: Methodology -->
+<section class="methodology">
+    <div class="container">
+        <div class="methodology-content">
+            <h2 class="methodology-headline">Why Improv Helps Your Spanish</h2>
+            <p class="methodology-copy">Traditional learning uses focused thinking (grammar, rules, drills). Improv activates <strong>Diffuse Thinking</strong>—a relaxed state where your brain makes new connections faster. By focusing on the scene and your partner, you stop translating in your head and start reacting in the moment.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
